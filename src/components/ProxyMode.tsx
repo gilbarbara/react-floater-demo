@@ -3,8 +3,10 @@ import Floater from "react-floater";
 
 import Target from "./Target";
 
-export default class ProxyMode extends React.Component {
-  setRef = c => {
+export default class ProxyMode extends React.Component<any, any> {
+	target: HTMLElement | null = null;
+
+  setRef = (c: HTMLElement) => {
     this.target = c;
     this.forceUpdate();
   };

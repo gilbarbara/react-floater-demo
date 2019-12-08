@@ -24,7 +24,7 @@ const Button = styled.span`
   border-radius: 4px;
 `;
 
-const CustomFloater = ({ closeFn }) => (
+const CustomFloater = ({ closeFn }: any) => (
   <Wrapper>
     <span role="img" aria-label="styled" style={{ fontSize: 60 }}>
       💅
@@ -46,7 +46,7 @@ const CustomFloater = ({ closeFn }) => (
   </Wrapper>
 );
 
-export default function WithStyledComponents({ cb }) {
+export default function WithStyledComponents({ cb }: any) {
   return (
     <div>
       <Floater
@@ -58,7 +58,7 @@ export default function WithStyledComponents({ cb }) {
           arrow: {
             color: "#9ec2ff"
           },
-          tooltip: {
+          floater: {
             filter: "none"
           }
         }}

@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import disableScroll from 'disable-scroll';
 
 import Badges from './components/Badges';
@@ -23,7 +24,7 @@ export default class App extends React.Component {
     isTooltipActive: false
   };
 
-  cb(action, data) {
+  cb(action: any, data: any) {
     console.log(action, data);
 
     if (data.placement === 'center') {

@@ -15,9 +15,7 @@ const Title = styled.h2`
   margin-bottom: 30px;
 `;
 
-const Button = styled.button.attrs({
-  onClick: props => props.handleClick
-})`
+const Button = styled.button`
   background: transparent;
   color: palevioletred;
   padding: 8px;
@@ -53,10 +51,10 @@ const Input = styled.input.attrs({
   width: 100%;
 `;
 
-const Content = ({ closeFn }) => (
+const Content = ({ closeFn }: any) => (
   <Wrapper>
     <Title>I'm a custom component acting as modal. No arrow and centered</Title>
-    <Button handleClick={closeFn}>✖</Button>
+    <Button onClick={closeFn}>✖</Button>
     <form
       onSubmit={e => {
         e.preventDefault();
@@ -77,7 +75,7 @@ const Content = ({ closeFn }) => (
   </Wrapper>
 );
 
-export default function Modal({ cb }) {
+export default function Modal({ cb }: any) {
   return (
     <div>
       <Floater callback={cb} component={Content} hideArrow placement="center">

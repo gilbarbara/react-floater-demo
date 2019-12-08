@@ -1,8 +1,10 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default class WithTitleAndFooter extends React.Component {
-  callback = (action, data) => {
+export default class WithTitleAndFooter extends React.Component<any, any> {
+	tooltip: React.Component | null = null;
+
+  callback = (action: string, props: any) => {
     const { cb } = this.props;
 
     if (action === "close") {
@@ -10,11 +12,12 @@ export default class WithTitleAndFooter extends React.Component {
       document.body.removeEventListener("click", this.close);
     }
 
-    cb(action, data);
+    cb(action, props);
   };
 
-  close = e => {
+  close = () => {
     console.log("click", this.tooltip);
+
     if (this.tooltip) {
       this.tooltip.setState({ status: "close" });
     }

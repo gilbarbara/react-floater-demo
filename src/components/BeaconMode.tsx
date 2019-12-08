@@ -1,7 +1,7 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default function BeaconMode({ cb }) {
+export default function BeaconMode({ cb }: any) {
   return (
     <div>
       <div>
@@ -17,7 +17,7 @@ export default function BeaconMode({ cb }) {
               Yeah, this is how we use to look back in the day!
             </div>
           }
-          eventType="hover"
+          event="hover"
           disableFlip
           placement="top"
           wrapperOptions={{

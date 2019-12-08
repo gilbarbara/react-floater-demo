@@ -27,13 +27,13 @@ const FloaterFactory = ({
   cb,
   content = "I'm called from a large body of text!",
   text
-}) => (
+}: any) => (
   <Floater callback={cb} content={content} placement="top" event="hover">
     <Highlight>{text}</Highlight>
   </Floater>
 );
 
-export default function WithText({ cb }) {
+export default function WithText({ cb }: any) {
   const away = <FloaterFactory cb={cb} text="away" />;
 
   const semantics = (

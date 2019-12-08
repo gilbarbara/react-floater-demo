@@ -1,7 +1,7 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default function WithHoverCustomDelay({ cb }) {
+export default function WithHoverCustomDelay({ cb }: any) {
   return (
     <div>
       <Floater

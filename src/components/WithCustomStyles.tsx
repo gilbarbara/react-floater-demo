@@ -1,7 +1,7 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default function WithCustomStyles({ cb }) {
+export default function WithCustomStyles({ cb }: any) {
   return (
     <div>
       <Floater
@@ -24,7 +24,7 @@ export default function WithCustomStyles({ cb }) {
         placement="right-end"
         offset={0}
         styles={{
-          tooltip: {
+          floater: {
             filter: "none"
           },
           container: {

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Floater from "react-floater";
 
-export default class Target extends React.Component {
+export default class Target extends React.Component<any, any> {
   static propTypes = {
     innerRef: PropTypes.func
   };

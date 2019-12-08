@@ -1,7 +1,7 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default function WithPosition({ cb }) {
+export default function WithPosition({ cb }: any) {
   return (
     <div>
       <Floater

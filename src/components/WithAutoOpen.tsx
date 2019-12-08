@@ -1,7 +1,7 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default function AutoOpen({ cb }) {
+export default function AutoOpen({ cb }: any) {
   return (
     <div>
       <Floater

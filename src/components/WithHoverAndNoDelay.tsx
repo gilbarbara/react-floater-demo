@@ -1,7 +1,7 @@
 import React from "react";
 import Floater from "react-floater";
 
-export default function WithHoverDefault({ cb }) {
+export default function WithHoverAndNoDelay({ cb }: any) {
   return (
     <div>
       <Floater
@@ -12,12 +12,14 @@ export default function WithHoverDefault({ cb }) {
             I can be triggered by click or hover (on devices with a mouse)
           </div>
         }
+        disableHoverToClick
         event="hover"
+        eventDelay={0}
         placement="top"
       >
         <button>HOVER</button>
       </Floater>
-      <p>default delay (0.4s)</p>
+      <p>no delay (0)</p>
     </div>
   );
 }
